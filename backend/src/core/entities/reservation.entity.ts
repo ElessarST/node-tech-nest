@@ -12,7 +12,7 @@ export class Reservation {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'name_of_guests' })
+  @Column({ name: 'number_of_guests' })
   numberOfGuests: number;
 
   @Column({ name: 'check_in_date' })
@@ -30,7 +30,7 @@ export class Reservation {
   @Column({ name: 'billing_address' })
   billingAddress: string;
 
-  @ManyToOne(() => Country)
+  @ManyToOne(() => Country, { eager: true })
   @JoinColumn({ name: 'billing_country_id' })
   billingCountry: Country;
 
@@ -45,4 +45,7 @@ export class Reservation {
 
   @Column({ name: 'phone_number' })
   phoneNumber: string;
+
+  @Column({ name: 'created_at' })
+  createdAt?: Date;
 }

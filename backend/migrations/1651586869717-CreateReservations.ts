@@ -15,6 +15,7 @@ export class CreateReservations1651586869717 implements MigrationInterface {
     city varchar(100) not null,
     email varchar(100) not null,
     phone_number varchar(100) not null,
+    created_at timestamp not null default now(),
     CONSTRAINT fk_country FOREIGN KEY(billing_country_id) REFERENCES countries(id)
 );`);
   }
