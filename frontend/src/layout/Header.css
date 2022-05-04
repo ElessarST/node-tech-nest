@@ -1,0 +1,10 @@
+.header {
+    padding: var(--space-md) var(--space-xl);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid ;
+}
+
+.header-logo {
+    font-weight: bold;
+    font-size: 32px;
+}
