@@ -31,8 +31,8 @@ const country = { id: 1, name: 'Germany' };
 
 const request: ReservationRequest = {
   numberOfGuests: 2,
-  checkInDate: 1651623425700,
-  checkOutDate: 1651625425700,
+  checkInDate: new Date(),
+  checkOutDate: new Date(),
   firstName: 'First',
   lastName: 'Last',
   billingAddress: 'Billing',

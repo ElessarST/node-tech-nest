@@ -14,6 +14,8 @@ import {
   PHONE_NUMBER_REQUIRED_ERROR,
   POSTAL_CODE_REQUIRED_ERROR,
 } from '../../consts/reservationErrorMessages';
+import { Transform } from 'class-transformer';
+import { parseDate } from '../../utils/dateUtils';
 
 export class ReservationRequest {
   @IsNotEmpty({ message: NUMBER_OF_GUESTS_MIN_ERROR })
@@ -21,12 +23,12 @@ export class ReservationRequest {
   numberOfGuests: number;
 
   @IsNotEmpty({ message: CHECK_IN_DATE_REQUIRED_ERROR })
-  @Min(0, { message: CHECK_IN_DATE_REQUIRED_ERROR })
-  checkInDate: number;
+  @Transform((params) => parseDate(params.value))
+  checkInDate: Date;
 
   @IsNotEmpty({ message: CHECK_OUT_DATE_REQUIRED_ERROR })
-  @Min(0, { message: CHECK_OUT_DATE_REQUIRED_ERROR })
-  checkOutDate: number;
+  @Transform((params) => parseDate(params.value))
+  checkOutDate: Date;
 
   @IsNotEmpty({ message: FIRST_NAME_REQUIRED_ERROR })
   firstName: string;

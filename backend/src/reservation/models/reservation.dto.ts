@@ -1,8 +1,8 @@
 export class ReservationDto {
   id: number;
   numberOfGuests: number;
-  checkInDate: Date;
-  checkOutDate: Date;
+  checkInDate: string;
+  checkOutDate: string;
   firstName: string;
   lastName: string;
   billingAddress: string;

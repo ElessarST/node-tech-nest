@@ -2,6 +2,7 @@ import { ReservationRequest } from './models/reservation.request';
 import { Country } from '../core/entities/country.entity';
 import { Reservation } from '../core/entities/reservation.entity';
 import { ReservationDto } from './models/reservation.dto';
+import { formatDate } from '../utils/dateUtils';
 
 export function createReservationEntity(
   request: ReservationRequest,
@@ -10,8 +11,8 @@ export function createReservationEntity(
   return {
     billingAddress: request.billingAddress,
     billingCountry,
-    checkInDate: new Date(request.checkInDate),
-    checkOutDate: new Date(request.checkOutDate),
+    checkInDate: request.checkInDate,
+    checkOutDate: request.checkOutDate,
     city: request.city,
     email: request.email,
     firstName: request.firstName,
@@ -26,8 +27,8 @@ export function toReservationDto(reservation: Reservation): ReservationDto {
   return {
     billingAddress: reservation.billingAddress,
     billingCountry: reservation.billingCountry.name,
-    checkInDate: reservation.checkInDate,
-    checkOutDate: reservation.checkOutDate,
+    checkInDate: formatDate(reservation.checkInDate),
+    checkOutDate: formatDate(reservation.checkOutDate),
     city: reservation.city,
     email: reservation.email,
     firstName: reservation.firstName,

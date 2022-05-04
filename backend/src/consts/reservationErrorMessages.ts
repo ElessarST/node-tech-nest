@@ -1,10 +1,11 @@
 export const CHECK_IN_BEFORE_OUT_ERROR =
-  'Check in date should be before check out date';
+  'Check out date should be a day or more after check in';
 export const COUNTRY_NOT_FOUND_ERROR = 'Country not found';
 
 export const NUMBER_OF_GUESTS_MIN_ERROR =
   'Number of guests should be greater than 1';
-export const CHECK_IN_DATE_MIN_ERROR = 'Check in date should be today or later';
+export const CHECK_IN_DATE_MIN_ERROR =
+  'Check in date should be tomorrow or later';
 export const CHECK_IN_DATE_REQUIRED_ERROR = 'Check in date is required';
 export const CHECK_OUT_DATE_REQUIRED_ERROR = 'Check out date is required';
 export const FIRST_NAME_REQUIRED_ERROR = 'First name is required';
