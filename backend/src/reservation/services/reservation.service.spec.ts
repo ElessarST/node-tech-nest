@@ -36,7 +36,7 @@ const request: ReservationRequest = {
   firstName: 'First',
   lastName: 'Last',
   billingAddress: 'Billing',
-  billingCountryId: 5,
+  billingCountry: 5,
   postalCode: '1234',
   city: 'Berlin',
   email: 'email@gmail.com',

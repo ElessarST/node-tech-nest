@@ -40,7 +40,7 @@ export class ReservationService implements IReservationService {
       throw new BadRequestException(validationMsg);
     }
     const billingCountry = await this.countryRepository.getById(
-      reservationReq.billingCountryId,
+      reservationReq.billingCountry,
     );
     if (!billingCountry) {
       throw new BadRequestException(COUNTRY_NOT_FOUND_ERROR);

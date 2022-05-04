@@ -1,0 +1,8 @@
+.select {
+    width: 100%;
+    padding: var(--space-md);
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    border: 1px solid var(--divider-color);
+    font-size: 14px;
+}

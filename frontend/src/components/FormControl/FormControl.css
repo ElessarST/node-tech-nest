@@ -1,0 +1,26 @@
+.input-wrapper-error {
+    margin-bottom: -15px;
+}
+
+.input-label {
+    margin-bottom: var(--space-sm);
+}
+
+.input-label-error {
+    color: red;
+}
+
+.label-required {
+    color: red;
+}
+
+.input-label-error {
+    color: red;
+    margin-top: var(--space-sm);
+}
+
+.input-error-msg {
+    color: red;
+    font-size: 10px;
+    margin-top: var(--space-xxs);
+}

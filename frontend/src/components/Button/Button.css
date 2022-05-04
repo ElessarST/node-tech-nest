@@ -1,0 +1,15 @@
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 24px 48px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: initial;
+}

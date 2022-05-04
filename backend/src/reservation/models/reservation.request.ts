@@ -40,7 +40,7 @@ export class ReservationRequest {
   billingAddress: string;
 
   @IsNotEmpty({ message: BILLING_COUNTRY_REQUIRED_ERROR })
-  billingCountryId: number;
+  billingCountry: number;
 
   @IsNotEmpty({ message: POSTAL_CODE_REQUIRED_ERROR })
   postalCode: string;
@@ -49,7 +49,7 @@ export class ReservationRequest {
   city: string;
 
   @IsNotEmpty({ message: EMAIL_REQUIRED_ERROR })
-  @IsEmail({ message: EMAIL_NOT_VALID_ERROR })
+  @IsEmail(undefined, { message: EMAIL_NOT_VALID_ERROR })
   email: string;
 
   @IsNotEmpty({ message: PHONE_NUMBER_REQUIRED_ERROR })

@@ -1,9 +1,12 @@
 :root {
     /* Colors */
     --bg-color: #f7f1e9;
+    --text-color: #4b4b4d;
     --primary-color: #4d6447;
+    --divider-color: #9d9e9f;
 
     /* Spacings */
+    --space-xxs: 2px;
     --space-xs: 4px;
     --space-sm: 8px;
     --space-md: 16px;
